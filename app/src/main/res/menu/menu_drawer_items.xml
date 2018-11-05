@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group_1">
+        <item
+            android:id="@+id/nav_cinemas"
+            android:icon="@drawable/ic_cinema"
+            android:title="@string/cinemas" />
+
+        <item
+            android:id="@+id/nav_popular_actors"
+            android:icon="@drawable/ic_actor_default_avatar"
+            android:title="@string/popular_actors"/>
+
+        <item
+            android:id="@+id/nav_advanced_search"
+            android:icon="@drawable/ic_action_search"
+            android:title="@string/advanced_search"/>
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/settings" />
+
+        <item
+            android:id="@+id/nav_favourite_list_cinema"
+            android:icon="@drawable/ic_star"
+            android:title="@string/favourites_cinema"/>
+
+    </group>
+
+    <group
+        android:id="@+id/group_2">
+
+        <item
+            android:id="@+id/nav_schedules"
+            android:icon="@drawable/ic_schedule"
+            android:title="@string/schedules" />
+
+    </group>
+
+</menu>

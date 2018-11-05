@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#333333</color>
+    <color name="colorPrimaryDark">#1F1F1F</color>
+    <color name="colorAccent">#1e88e5</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="colorGray">#333333</color>
+    <color name="colorGreen">#18df0a</color>
+    <color name="colorYellow">#effb0d</color>
+    <color name="colorBlack">#FF000000</color>
+    <color name="colorRed">#FFF40808</color>
+    <color name="colorDarkRed">#c30000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorOrange">#FFFF9100</color>
+    <color name="colorDarkOrange">#c56200</color>
+    <color name="colorDarkGreen">#009933</color>
+    <color name="colorLightOrange">#B3613D</color>
+    <color name="colorPurple">#8e24aa</color>
+    <color name="colorDarkPurple">#5c007a</color>
+    <color name="colorDivider">#1FFFFFFF</color>
+    <color name="colorLightGreen">#ffa6c575</color>
+    <color name="colorBlue">#FF1976D2</color>
+    <color name="colorDarkBackground">#FF424242</color>
+    <color name="colorPosterBackground">#242425</color>
+    <color name="colorPink">#fa315b</color>
+    <color name="colorLightBlue">#40c4ff</color>
+    <color name="colorDarkBlue">#00b0ff</color>
+</resources>
