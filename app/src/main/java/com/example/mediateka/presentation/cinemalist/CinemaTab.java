@@ -14,6 +14,7 @@ import java.util.List;
 
 import io.reactivex.disposables.CompositeDisposable;
 
+/**enum ,каждое значение которого переопределяет метод loadCinemaList */
 public enum CinemaTab {
 
     POPULAR {
@@ -44,14 +45,22 @@ public enum CinemaTab {
         }
     };
 
+    /** CompositeDisposable для хранения подписки*/
     private final CompositeDisposable compositeDisposable = new CompositeDisposable();
 
+    /**Если подписка не отписана,то отписывается */
     public void dispose(){
         if (!compositeDisposable.isDisposed()){
             compositeDisposable.dispose();
         }
     }
 
+    /**метод,котрый переопределяют все элеменеты enum.Подписывает {@link UseCaseSubscriber<List<Cinema>} на
+     * {@link UseCase<List<Cinema>>}
+     * @param useCase
+     * @param subscriber
+     * @param view для взаимодействия с MainActivity, в частности для вызова метода активити для выделения
+     * нажатого таба*/
     public <T extends CinemaTabSelectorView> void loadCinemaList(@Nullable UseCase<List<Cinema>> useCase,
                                                                  @Nullable UseCaseSubscriber<List<Cinema>> subscriber,
                                                                  @NonNull T view){

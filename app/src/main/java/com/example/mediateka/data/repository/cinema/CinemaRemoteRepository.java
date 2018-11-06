@@ -141,12 +141,7 @@ public class CinemaRemoteRepository implements CinemaRepository {
                     public List<Cinema> apply(@NonNull CinemaResponse cinemaResponse) throws Exception {
                         return mapper.map(cinemaResponse);
                     }
-                }).doAfterSuccess(new Consumer<List<Cinema>>() {
-                    @Override
-                    public void accept(@NonNull List<Cinema> cinemas) throws Exception {
-                        cinemaLocalRepository.insertCinemas(mapper.map(cinemas));
-                    }
-                });
+                }).doAfterSuccess(cinemas -> cinemaLocalRepository.insertCinemas(mapper.map(cinemas)));
             }
         };
 

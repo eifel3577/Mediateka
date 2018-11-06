@@ -61,7 +61,7 @@
     <string name="undo">Undo</string>
     <string name="message_removed_cinema">%s successfully deleted.</string>
     <string name="delete">Delete</string>
-    <string name="duration">%dh %dm</string>
+    <string name="duration">hm</string>
     <string name="message_clear_favourite_list">Clear favourite list</string>
     <string name="message_successfully_favourite_cinema_list_cleared">Favourite movies removed.</string>
     <string name="message_see_list">See List</string>

@@ -10,6 +10,7 @@ import io.reactivex.Flowable;
 import io.reactivex.Observable;
 import io.reactivex.Single;
 
+/**общий интерфейс репозитория */
 public interface CinemaRepository {
 
     Single<List<Cinema>> getCinemas(int pageIndex);

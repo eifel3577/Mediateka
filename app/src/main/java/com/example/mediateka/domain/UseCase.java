@@ -6,12 +6,16 @@ import io.reactivex.Scheduler;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.subscribers.DisposableSubscriber;
 
+/**общий класс для юзкейсов */
 public abstract class UseCase<T> {
 
     protected int pageIndex = 1;
 
+    /**поток выполнения */
     private final Scheduler executorThread;
+    /**главный поток */
     private final Scheduler uiThread;
+    /**хранилище подписки */
     private final CompositeDisposable compositeDisposable;
 
     public UseCase(Scheduler executorThread,
@@ -21,6 +25,12 @@ public abstract class UseCase<T> {
         compositeDisposable = new CompositeDisposable();
     }
 
+    /**Создает {@link Flowable<T>}.Непосредственно {@link Flowable<T>} создается наследниками в переопределенном
+     * методе createUseCase().К получившимуся {@link Flowable<T>} прикрепляется подписчик {@link UseCaseSubscriber<T>}
+     * Подписчик кладется в хранилище подписки {@link CompositeDisposable}
+     *
+     * @param disposableSubscriber
+     *  */
     public void subscribe(DisposableSubscriber<T> disposableSubscriber){
         if (disposableSubscriber == null){
             throw new IllegalArgumentException("subscriber must not be null");

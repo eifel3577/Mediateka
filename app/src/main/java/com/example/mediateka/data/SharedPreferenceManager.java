@@ -2,6 +2,8 @@ package com.example.mediateka.data;
 
 import android.content.SharedPreferences;
 
+import com.google.gson.annotations.Since;
+
 public class SharedPreferenceManager {
 
     private final SharedPreferences preferences;
@@ -11,8 +13,14 @@ public class SharedPreferenceManager {
         this.preferences = preferences;
     }
 
-    public void saveCinemaSortingPosition(int position){
-        edit(editor -> editor.putInt(PREF_CINEMA_SORTING_POSITION , position));
+    public void saveCinemaSortingPosition(final int position){
+
+        edit(new Consumer<SharedPreferences.Editor>() {
+            @Override
+            public void apply(SharedPreferences.Editor editor) {
+                editor.putInt(PREF_CINEMA_SORTING_POSITION , position);
+            }
+        });
     }
 
     public int getCinemaSortingPosition(){
@@ -25,7 +33,8 @@ public class SharedPreferenceManager {
         editor.apply();
     }
 
-    @FunctionalInterface
+
+    //@FunctionalInterface
     private interface Consumer<T>{
         void apply(T t);
     }

@@ -25,6 +25,7 @@ import com.example.mediateka.utils.AnimUtils;
 
 import javax.inject.Inject;
 
+/**активити поиска фильма */
 public class SearchActivity extends BaseActivity implements SearchPresenter.View, TabLayout.OnTabSelectedListener, TextWatcher, View.OnTouchListener {
 
     private ViewPager mViewPager;
@@ -35,13 +36,18 @@ public class SearchActivity extends BaseActivity implements SearchPresenter.View
     private SmallCinemasFragment mCinemasFragment;
     private ActorsFragment mActorsFragment;
 
-    @Inject SearchPresenter presenter;
+    /**получает свой презентер через даггер */
+    @Inject
+    SearchPresenter presenter;
 
+    /**переопределение метода родительского класса BaseActivity
+    * @return макет для SearchActivity */
     @Override
     protected int getLayoutId() {
         return R.layout.activity_search;
     }
 
+    /**включение слушателей */
     @Override
     protected void onStart() {
         super.onStart();
@@ -50,6 +56,7 @@ public class SearchActivity extends BaseActivity implements SearchPresenter.View
         mSearchField.setOnTouchListener(this);
     }
 
+    /** */
     @Override
     protected void onStop() {
         mSearchField.setOnTouchListener(null);

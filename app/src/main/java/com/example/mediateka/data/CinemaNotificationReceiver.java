@@ -18,7 +18,7 @@ import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.app.TaskStackBuilder;
 
 
-import com.example.mediateka.R;
+
 import com.example.mediateka.domain.SystemTimeCalculator;
 import com.example.mediateka.models.model.DateAndTimeInfo;
 import com.example.mediateka.presentation.cinemadetail.CinemaDetailsActivity;

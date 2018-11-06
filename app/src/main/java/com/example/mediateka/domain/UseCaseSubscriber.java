@@ -3,6 +3,7 @@ package com.example.mediateka.domain;
 
 import io.reactivex.subscribers.DisposableSubscriber;
 
+/**подписчик */
 public abstract class UseCaseSubscriber<T> extends DisposableSubscriber<T> {
     @Override
     public void onNext(T t) {

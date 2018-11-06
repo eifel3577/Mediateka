@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 
 import com.example.mediateka.MediatekaApp;
+import com.example.mediateka.di.actor.ActorDetailModule;
 import com.example.mediateka.models.model.Actor;
 import com.example.mediateka.presentation.posterslider.PosterSliderActivity;
 

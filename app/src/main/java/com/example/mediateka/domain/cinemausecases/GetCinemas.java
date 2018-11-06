@@ -15,6 +15,7 @@ import io.reactivex.Scheduler;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 
+/**юзкейс получения обычного базового списка фильмов */
 public class GetCinemas extends UseCase<List<Cinema>> {
 
     private final CinemaRepository repository;
@@ -26,6 +27,7 @@ public class GetCinemas extends UseCase<List<Cinema>> {
         this.repository = repository;
     }
 
+    /**переопределение метода класса родителя */
     @Override
     public Flowable<List<Cinema>> createUseCase() {
         return repository.getCinemas(pageIndex)
